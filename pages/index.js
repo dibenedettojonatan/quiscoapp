@@ -1,0 +1,31 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import Layout from '../layout/Layout'
+import Producto from '../components/Producto'
+import useQuisco from '../hooks/useQuisco'
+
+
+export default function Home() {
+
+  const { categoriaActual } = useQuisco()
+
+  return (
+    <Layout pagina={`Menú ${categoriaActual?.nombre}`}>
+      <h1 className='text-4xl font-black text-center'>
+        {categoriaActual?.nombre}
+      </h1>
+      <p className='text-2xl my-10 text-center'>
+        Elige y personaliza tu pedido  a continuacion
+      </p>
+      <div className='grid gap-4 grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 bor'>
+        {categoriaActual?.productos?.map((producto) =>(
+        <Producto key={producto.id} producto={producto}/>
+        ))}
+      </div>
+      
+
+    </Layout>
+  )
+  
+}
+
