@@ -32,9 +32,8 @@ const Pasos = () => {
                 <button
                     onClick={() => {
                         router.push(paso.url)
-                    
                     }}
-                    className="text-2xl font-bold"
+                    className="text-2xl px-1 font-bold"
                     key={paso.paso}
                 >
                     {paso.nombre}

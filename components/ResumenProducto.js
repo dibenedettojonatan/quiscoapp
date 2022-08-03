@@ -5,8 +5,8 @@ import useQuisco from "../hooks/useQuisco"
 const ResumenProducto = ({producto}) => {
   const {handleEditarCantidades, handleEliminarProducto} = useQuisco()
   return (
-    <div className="shadow p-5 mb-3 flex gap-10 items-center rounded">
-        <div className="md:w-1/6">
+    <div className="shadow p-5 mb-3 lg:flex sm:inline-block gap-10 items-center rounded">
+        <div className="md:w-1/6" >
             <Image
                 width={300}
                 height={400}
@@ -15,7 +15,7 @@ const ResumenProducto = ({producto}) => {
                 className="rounded"
             />
         </div>
-        <div className="md:w-4/6" >
+        <div className="md:w-4/6"  >
           <p className="text-3xl font-bold">{producto.nombre}</p>
           <p className="text-xl font-bold mt-2">Cantidad: {producto.cantidad}</p>
           <p className="text-xl font-bold text-amber-500 mt-2">Cantidad: {formatearDinero(producto.precio)}</p>
@@ -25,7 +25,19 @@ const ResumenProducto = ({producto}) => {
         <div>
           <button
             type="button"
-            className="bg-sky-700 flex gap-2 px-5 py-2 text-white rounded-md font-bold uppercase shadow-md w-full"
+            className="  
+                    bg-sky-700
+                    text-white 
+                      text-center 
+                      flex gap-2 px-5 py-2  
+                      rounded-md 
+                      font-bold 
+                      uppercase 
+                      shadow-md 
+                      w-full
+                      mt-3
+                      "
+                      
             onClick={() => handleEditarCantidades(producto.id)}
           >
            <svg   xmlns="http://www.w3.org/2000/svg"  
@@ -40,7 +52,17 @@ const ResumenProducto = ({producto}) => {
           </button>
           <button
             type="button"
-            className="bg-red-700 flex gap-2 px-5 py-2 text-white rounded-md font-bold uppercase shadow-md w-full mt-3"
+            className="
+                    bg-red-700
+                    text-white 
+                      text-center 
+                      flex gap-2 px-5 py-2  
+                      rounded-md 
+                      font-bold 
+                      uppercase 
+                      shadow-md  
+                      w-full 
+                      mt-3"
             onClick={() => handleEliminarProducto(producto.id)}
           >
             <svg  xmlns="http://www.w3.org/2000/svg" 
