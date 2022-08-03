@@ -18,7 +18,7 @@ const ResumenProducto = ({producto}) => {
         <div className="md:w-4/6"  >
           <p className="text-3xl font-bold">{producto.nombre}</p>
           <p className="text-xl font-bold mt-2">Cantidad: {producto.cantidad}</p>
-          <p className="text-xl font-bold text-amber-500 mt-2">Cantidad: {formatearDinero(producto.precio)}</p>
+          <p className="text-xl font-bold text-amber-500 mt-2">Precio: {formatearDinero(producto.precio)}</p>
 
           <p className="text-sm text-gray-700 mt-2">Subtotal: {formatearDinero(producto.precio * producto.cantidad)}</p>
         </div>
@@ -55,7 +55,7 @@ const ResumenProducto = ({producto}) => {
             className="
                     bg-red-700
                     text-white 
-                      text-center 
+                    text-center 
                       flex gap-2 px-5 py-2  
                       rounded-md 
                       font-bold 
