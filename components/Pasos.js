@@ -1,4 +1,4 @@
-import { useRouter } from 'next/Router'
+import { useRouter } from 'next/router'
 
 
 const pasos=  [
