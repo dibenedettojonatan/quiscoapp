@@ -71,7 +71,7 @@ const ModalProducto = () => {
                     </svg>
                 </button>
                 <p className="text-3xl">{cantidad}</p>
-                <butto
+                <button
                      type="button"
                      onClick={()=>{
                         if(cantidad >= 5 ) return
@@ -89,7 +89,7 @@ const ModalProducto = () => {
                                 d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" 
                         />
                     </svg>
-                </butto>
+                </button>
             </div>
             <butto
                 type="button"
